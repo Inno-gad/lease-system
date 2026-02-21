@@ -38,14 +38,14 @@
                                     <a href="{{ route('tenants.edit', $tenant->id) }}"
                                        class="text-blue-600">Edit</a>
 
-                                    <form action="{{ route('tenants.destroy', $tenant->id) }}"
-                                          method="POST"
-                                          class="inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                                class="text-red-600 ml-2">
-                                            Delete
+                                    <form action="{{ route('tenants.destroy', $tenant->id) }}" method="POST" style="display:inline;">
+                                   @csrf
+                                   @method('DELETE')
+                                 <button type="submit" class="btn btn-danger btn-sm">
+                                   Delete
+                                 </button>
+                                 </form>
+
                                         </button>
                                     </form>
                                 </td>

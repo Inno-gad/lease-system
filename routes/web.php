@@ -23,3 +23,6 @@ Route::resource('tenants', TenantController::class)->middleware('auth');
 Route::resource('properties', PropertyController::class);
 
 require __DIR__.'/auth.php';
+use App\Http\Controllers\DashboardController;
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
